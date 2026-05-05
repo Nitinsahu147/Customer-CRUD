@@ -3,6 +3,7 @@ package com.work.Customers.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,7 +41,7 @@ public class CustomerController {
 	public Customer updateOne(@PathVariable Long id, @RequestBody Customer cus) {
 		return service.update(id, cus);
 	}
-	
+	@DeleteMapping("/{id}")
 	public String deleteOne(@PathVariable Long id) {
 		service.delete(id);
 		return "Deleted Successfully";
