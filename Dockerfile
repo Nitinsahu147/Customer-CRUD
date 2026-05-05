@@ -2,7 +2,7 @@
  
  WORKDIR /app
  
- COPY yarget/*.jar app.jar
+ COPY target/*.jar app.jar
  
  EXPOSE 8080
  
